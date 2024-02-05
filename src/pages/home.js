@@ -1,33 +1,37 @@
 import { navigateTo } from "@/router.js";
 import Component from "@components/Component.js";
+import MonsterCard from "../components/shared/MonsterCard";
 
 class HomePage extends Component {
+  async setup() {
+    this.$state = {};
+    await this.getMonster();
+  }
+
   template() {
     return `
-      <div>asdasdads</div>
+      <div>Monster</div>
+      <div class='list-container'>
+        ${this.$state.monsters
+          ?.map((monster) => new MonsterCard({ monster }).template())
+          .join("")}
+      </div>
      `;
   }
 
-  mounted() {
-    const $stateComponent = document.querySelector(".stateComponent");
-  }
+  mounted() {}
 
-  setEvent() {
-    this.addEvent("click", '[data-component="button-to-list"]', () => {
-      this.moveToList();
+  setEvent() {}
+
+  async getMonster() {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    const json = await res.json();
+
+    this.setState({
+      monsters: json,
     });
   }
-
-  moveToList() {
-    navigateTo("/");
-  }
 }
-
-// // 이미지 주소(src)
-// https://robohash.org/숫자?set=set2&size=180x180
-// // 예시
-// https://robohash.org/1?set=set2&size=180x180
-// https://robohash.org/2?set=set2&size=180x180
-// https://robohash.org/3?set=set2&size=180x180
 
 export default HomePage;
