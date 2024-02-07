@@ -1,5 +1,5 @@
-import { navigateTo } from "../../router";
-import Component from "../Component";
+import { navigateTo } from "@/router";
+import Component from "@components/Component";
 
 class Header extends Component {
   template() {

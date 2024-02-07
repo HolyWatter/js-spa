@@ -1,6 +1,5 @@
-import { navigateTo } from "@/router.js";
-import Component from "@components/Component.js";
-import MonsterCard from "../components/shared/MonsterCard";
+import Component from "@components/Component";
+import MonsterCard from "@components/shared/MonsterCard";
 
 class HomePage extends Component {
   async setup() {

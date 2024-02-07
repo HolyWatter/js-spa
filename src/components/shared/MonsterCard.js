@@ -1,4 +1,4 @@
-import { navigateTo } from "../../router";
+import { navigateTo } from "@/router";
 
 class MonsterCard {
   id;

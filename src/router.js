@@ -1,6 +1,6 @@
-import HomePage from "@pages/home.js";
-import MonsterPage from "@pages/monster.js";
-import Layout from "./components/shared/Layout";
+import HomePage from "@pages/home";
+import MonsterPage from "@pages/monster";
+import Layout from "@components/shared/Layout";
 
 const $root = document.getElementById("root");
 

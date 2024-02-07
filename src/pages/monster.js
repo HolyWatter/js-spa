@@ -1,5 +1,5 @@
-import Component from "@components/Component.js";
-import { navigateTo } from "../router";
+import Component from "@components/Component";
+import { navigateTo } from "@/router";
 
 class MonsterPage extends Component {
   async setup() {

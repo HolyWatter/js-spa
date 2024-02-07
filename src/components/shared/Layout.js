@@ -1,5 +1,5 @@
-import Component from "../Component";
-import Header from "./Header";
+import Component from "@components/Component";
+import Header from "@components/shared/Header";
 
 class Layout extends Component {
   template() {
