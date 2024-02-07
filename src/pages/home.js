@@ -10,7 +10,7 @@ class HomePage extends Component {
 
   template() {
     return `
-      <div>Monster</div>
+      <h1 class='title'>Monster List</h1>
       <div class='list-container'>
         ${this.$state.monsters
           ?.map((monster) => new MonsterCard({ monster }).template())

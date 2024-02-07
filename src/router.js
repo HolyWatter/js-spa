@@ -1,9 +1,11 @@
 import HomePage from "@pages/home.js";
+import MonsterPage from "@pages/monster.js";
 
 const $root = document.getElementById("root");
 
 const routes = {
   "/": HomePage,
+  "/monster/:id": MonsterPage,
 };
 
 const pathToRegex = (path) =>

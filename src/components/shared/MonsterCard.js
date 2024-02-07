@@ -8,7 +8,6 @@ class MonsterCard {
     this.id = $props.monster.id;
     this.name = $props.monster.name;
     this.template();
-    console.log(2);
     this.registEvent();
   }
 
