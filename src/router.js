@@ -1,5 +1,6 @@
 import HomePage from "@pages/home.js";
 import MonsterPage from "@pages/monster.js";
+import Layout from "./components/shared/Layout";
 
 const $root = document.getElementById("root");
 
@@ -18,7 +19,7 @@ const changeUrl = (requestedUrl) => {
 
   const matchedComponent = routes[matchedPath];
 
-  matchedComponent ? new matchedComponent($root).render() : null;
+  matchedComponent ? new Layout($root, { children: matchedComponent }) : null;
 };
 
 export const navigateTo = (path) => {

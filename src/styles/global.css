@@ -2,6 +2,23 @@
   padding-top: 100px;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+
+  box-shadow: 2px 2px 2px 0px #00000010;
+}
+
+.header button {
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
 .list-container {
   display: grid;
   grid-template-columns: repeat(5, 180px);
